@@ -1,7 +1,10 @@
-<h1>Create A New Bookmark</h1>
+<h1 class="text-center m-4">Create A New Bookmark</h1>
 
-<%= simple_form_for [@list, @bookmark] do |f| %>
-  <%= f.input :comment %>
-  <%= f.association :movie, input_html: {data: {controller: "tom-select"}} %>
-  <%= f.button :submit %>
-<% end %>
+<div class="justify-content-center text-center border border-light bg-secondary d-flex flex-column">
+  <div ml-4>
+    <%= simple_form_for [@list, @bookmark] do |f| %>
+    <%= f.input :comment %>    <%= f.association :movie, input_html: {data: {controller: "tom-select"}} %>
+    <%= f.button :submit, class:"bg-primary text-light" %>
+  <% end %>
+  </div>
+</div>

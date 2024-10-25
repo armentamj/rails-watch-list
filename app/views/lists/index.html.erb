@@ -1,8 +1,7 @@
-<h1>All Lists</h1>
-<h2>Super Obvious Text</h2>
+<h1 class="text-center m-4">All Lists</h1>
 
-<% @lists.each do |list| %>
-  <%= link_to "#{list.name}", list_path(list) %>
-<% end %>
-
-<%= link_to "Create a new list", new_list_path %>
+<div class="d-flex flex-column bg-secondary w-25">
+  <% @lists.each do |list| %>
+    <%= link_to "Go to '#{list.name}'", list_path(list), class:" rounded text-decoration-none ml-4 my-4 text-light p-1" %>
+  <% end %>
+</div>

@@ -1,10 +1,9 @@
-<h1 class="m-3"><%= @list.name %></h1>
-<%= link_to "Bookmark Movie", new_list_bookmark_path(@list), class:"btn btn-success m-3 text-white"%>
-
+<h1 class="text-center my-4 font-weight-bold">Name of List: <%= @list.name %></h1>
 <% @list.movies.each do |movie|%>
   <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
-  <p class="m-3"><%= movie.title %></p>
-  <img src="<%= movie.poster_url %>" alt="Poster for the movie #{movie.title}" class="m-3">
-  <p class="m-3">Comment: <%= bookmark.comment %></p>
-  <%= link_to "delete", bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confrim: "Confirm deletetion of #{movie.title} from list #{@list.name}."}, class:"btn btn-success m-3 text-white" %>
+  <h3 class="m-4"><%= movie.title %></h3>
+  <img src="<%= movie.poster_url %>" alt="Poster for the movie #{movie.title}" class="m-4 border border-white rounded">
+  <p class="m-4">Comment: <%= bookmark.comment %></p>
+  <%= link_to "delete", bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confrim: "Confirm deletetion of #{movie.title} from list #{@list.name}."}, class:"btn btn-danger m-4 text-white" %>
+  <%= link_to "Bookmark Movie", new_list_bookmark_path(@list), class:"btn btn-success m-4 text-white"%>
 <% end %>

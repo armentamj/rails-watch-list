@@ -1,6 +1,8 @@
-<h1>Please Create A List</h1>
+<h1 class="m-4">Please Create A List</h1>
 
-<%= simple_form_for @list do |f| %>
-  <%= f.input :name %>
-  <%= f.button :submit %>
-<% end %>
+<div class="mx-4 w-50">
+  <%= simple_form_for @list do |f| %>
+    <%= f.input :name %>
+    <%= f.button :submit, class:"text-light bg-primary" %>
+  <% end %>
+</div>
