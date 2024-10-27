@@ -1,6 +1,8 @@
-<h1>Please Create A List</h1>
+<h1 class="text-white text-center">Create A List</h1>
 
-<%= simple_form_for @list do |f| %>
-  <%= f.input :name %>
-  <%= f.button :submit %>
-<% end %>
+<div class="w-25 mx-4 text-white">
+  <%= simple_form_for @list do |f| %>
+    <%= f.input :name %>
+    <%= f.button :submit, class:"text-white bg-success" %>
+  <% end %>
+</div>

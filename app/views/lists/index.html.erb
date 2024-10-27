@@ -1,6 +1,6 @@
 <h1 class="text-light text-center">All Lists</h1>
-<div class="d-flex flex-column bg-secondary w-25">
+<div class="d-flex flex-column bg-transparent w-25">
   <% @lists.each do |list| %>
-    <%= link_to "#{list.name}", list_path(list), class:"text-decoration-none text-light mx-4" %>
+    <%= link_to "#{list.name}", list_path(list), class:"btn-outline-primary btn btn-transparent text-decoration-none text-light mx-4 my-4 text-capitalize" %>
   <% end %>
 </div>

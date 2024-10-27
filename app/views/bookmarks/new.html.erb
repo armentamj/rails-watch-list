@@ -1,7 +1,8 @@
-<h1>Create A New Bookmark</h1>
-
-<%= simple_form_for [@list, @bookmark] do |f| %>
-  <%= f.input :comment %>
-  <%= f.association :movie, input_html: {data: {controller: "tom-select"}} %>
-  <%= f.button :submit %>
-<% end %>
+<h1 class="text-white text-center">Create A New Bookmark</h1>
+<div class="w-25 mx-4">
+  <%= simple_form_for [@list, @bookmark] do |f| %>
+    <%= f.input :comment %>
+    <%= f.association :movie, input_html: {data: {controller: "tom-select"}} %>
+    <%= f.button :submit, class:"text-white bg-transparent btn btn-outline-success" %>
+  <% end %>
+</div>

@@ -10,15 +10,17 @@
     <%= javascript_importmap_tags %>
   </head>
   <body class="bg-dark">
-    <div class="d-flex flex-row my-4 justify-content-start bg-transparent border-bottom border-white py-4">
+    <div class="d-flex flex-row my-4 justify-content-center bg-transparent border-bottom border-white py-4">
       <div class="mx-2 ">
         <div class="position-absolute top-0 start-0 z-n1">
-          <%= image_tag("film_reel_2", width: '1080px') %>
+          <%= image_tag("Movie-Night_light", width: '1900px') %>
         </div>
-        <%= image_tag("movie-buff_logo", width: '50px') %>
       </div>
-      <%= link_to "Create List", new_list_path, class:"text-decoration-none mx-4 bg-info rounded my-3 text-light px-2" %>
-      <%= link_to "Home", root_path, class:"text-decoration-none mx-4 bg-info rounded my-3 text-light px-2" %>
+      <div class="m-4 position-absolute top-0 start-0">
+        <%= image_tag("movie-buff_logo", width: '70px') %>
+      </div>
+      <p class="btn-outline-info btn btn-transparent mx-4"><%= link_to "Home", root_path, class:"link-opacity-100-hover text-decoration-none bg-transparent rounded text-light nav-link active" %></p>
+      <p class="btn-outline-info btn btn-transparent mx-4"><%= link_to "Create List", new_list_path, class:"link-opacity-100-hover text-decoration-none bg-transparent rounded text-light nav-link active" %></p>
     </div>
     <%= yield %>
   </body>
